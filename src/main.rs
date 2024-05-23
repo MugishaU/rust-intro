@@ -1,3 +1,4 @@
 fn main() {
-    println!("Hello, world!");
+  const NAME: &str = "Mugisha";
+  println!("Hello, world! My name is {NAME}.");
 }

@@ -1,16 +1,28 @@
 fn main() {
-  fn double(num: u128) -> u128 {
-    num * 2
+  // Statement block
+  {
+    let number_1 = 26;
+    let number_2 = 31;
+    let sum = number_1 + number_2;
+    println!("{sum}");
   }
 
-  // let int: i32 = 32;
-  let big_int = 105;
-  // let float = 1.2;
+  // Expression block
+  let sum = {
+    let number_1 = 11;
+    let number_2 = 31;
+    number_1 + number_2
+  };
 
-  let input = big_int;
+  let number = 10;
 
-  let output = double(big_int);
-  // let doubled_outcome = outcome;
+{
+  println!("{number}"); // Prints "10"
 
-  println!("{input} doubled is {output}");
+  let number = 22;
+    println!("{number}"); // Prints "22"
+} // Our second declaration of `number` is dropped from memory here.
+  // It is now considered out-of-scope.
+
+println!("{number}"); // Prints "10"
 }
